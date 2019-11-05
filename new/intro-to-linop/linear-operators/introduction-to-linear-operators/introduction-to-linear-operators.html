@@ -3,7 +3,7 @@
 <HEAD>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-  <title>Introduction to LinearOperations.jl</title>
+  <title>Introduction to LinearOperators.jl</title>
   
 
   <script type="text/x-mathjax-config">
@@ -656,7 +656,7 @@ div.title {text-align: center;}
         <div class = "col-md-12 twelve columns">
 
           <div class="title">
-            <h1 class="title">Introduction to LinearOperations.jl</h1>
+            <h1 class="title">Introduction to LinearOperators.jl</h1>
             <h5>Abel Soares Siqueira</h5>
             
           </div>
@@ -684,7 +684,23 @@ introduction-to-linear-operators/Project.toml&#96;
   </span><span class='hljl-so'>pkg&quot;add Plots&quot;</span><span class='hljl-t'>
   </span><span class='hljl-so'>pkg&quot;add PyPlot&quot;</span><span class='hljl-t'>
 </span><span class='hljl-k'>end</span><span class='hljl-t'>
-</span><span class='hljl-so'>pkg&quot;status&quot;</span>
+</span><span class='hljl-so'>pkg&quot;instantiate&quot;</span>
+</pre>
+
+
+<pre class="output">
+Installed FFTW ─────────── v1.0.1
+ Installed CSTParser ────── v1.0.0
+ Installed BinaryProvider ─ v0.5.7
+ Installed GR ───────────── v0.42.0
+  Building FFTW → &#96;~/.julia/packages/FFTW/MJ7kl/deps/build.log&#96;
+  Building GR ──→ &#96;~/.julia/packages/GR/f1Iqi/deps/build.log&#96;
+</pre>
+
+
+
+<pre class='hljl'>
+<span class='hljl-so'>pkg&quot;status&quot;</span>
 </pre>
 
 
@@ -751,7 +767,7 @@ Status &#96;~/projetos/jso/JSOTutorials.jl/linear-operators/introduction-to
 
 
 <pre class="output">
-3.3219841332160006e-16
+2.745032041236506e-16
 </pre>
 
 
@@ -788,7 +804,7 @@ true
 
 
 <pre class="output">
-1.196923 seconds &#40;233 allocations: 122.083 MiB, 10.84&#37; gc time&#41;
+1.810764 seconds &#40;233 allocations: 122.083 MiB, 1.31&#37; gc time&#41;
 </pre>
 
 
@@ -811,7 +827,7 @@ true
 
 
 <pre class="output">
-0.016336 seconds &#40;8 allocations: 62.813 KiB&#41;
+0.009379 seconds &#40;8 allocations: 62.813 KiB&#41;
 </pre>
 
 
@@ -822,7 +838,7 @@ true
 
 
 <pre class="output">
-0.015649 seconds &#40;12 allocations: 62.969 KiB&#41;
+0.009115 seconds &#40;12 allocations: 62.969 KiB&#41;
 </pre>
 
 
@@ -841,7 +857,7 @@ true
 
 
 <pre class="output">
-1.8018985154231163e-13
+4.0848078569440913e-14
 </pre>
 
 
@@ -875,7 +891,7 @@ H_{k+1} = \bigg(I - \frac{s_k y_k^T}{y_k^T s_k}\bigg)H_k\bigg(I - \frac{y_k s_k^
 
 
 <pre class="output">
-&#40;2.2887833992611187e-16, 8.95090418262362e-16, 2.1642230995786356e-15&#41;
+&#40;4.440892098500626e-16, 0.0, 7.611305586242616e-16&#41;
 </pre>
 
 
@@ -1112,7 +1128,7 @@ nothing
           <div class="footer"><p>
           Published from <a href="introduction-to-linear-operators.jmd">introduction-to-linear-operators.jmd</a> using
           <a href="http://github.com/mpastell/Weave.jl">Weave.jl</a>
-           on 2019-11-04.
+           on 2019-11-05.
           <p></div>
 
 
