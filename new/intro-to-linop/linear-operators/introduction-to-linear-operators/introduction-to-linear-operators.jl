@@ -27,8 +27,8 @@ println("Tutorial beginning:")
 using LinearOperators
 
 prod(v) = [3v[1] - v[2]; 2v[1] + 2v[2]]
-#                  nrows, ncols, symm?, herm?, prod[; tprod, ctprod]
-A = LinearOperator(    2,     2, false, false, prod)
+#                     type, nrows, ncols, symm?, herm?, prod[; tprod, ctprod]
+A = LinearOperator(Float64,     2,     2, false, false, prod)
 
 A * ones(2)
 
@@ -36,7 +36,7 @@ A * ones(2)
 prod(v) = [3v[1] - v[2]; 2v[1] + 2v[2]]
 tprod(v) = [3v[1] + 2v[2]; -v[1] + 2v[2]]
 
-A = LinearOperator(2, 2, false, false, prod, tprod)
+A = LinearOperator(Float64, 2, 2, false, false, prod, tprod)
 
 A' * ones(2)
 
