@@ -689,33 +689,33 @@ Updating registry at &#96;~/.julia/registries/General&#96;
  Installed NaNMath ──────────── v0.3.3
  Installed PyPlot ───────────── v2.8.2
  Installed FFTW ─────────────── v1.0.1
- Installed PyCall ───────────── v1.91.2
- Installed LinearOperators ──── v0.6.0
  Installed PlotUtils ────────── v0.6.0
- Installed StatsBase ────────── v0.32.0
  Installed Plots ────────────── v0.27.0
+ Installed LinearOperators ──── v0.6.0
+ Installed StatsBase ────────── v0.32.0
+ Installed PyCall ───────────── v1.91.2
  Installed Measures ─────────── v0.3.1
  Installed MacroTools ───────── v0.5.3
  Installed RecipesBase ──────── v0.7.0
- Installed PlotThemes ───────── v1.0.1
  Installed Showoff ──────────── v0.3.1
- Installed FFMPEG ───────────── v0.2.4
+ Installed PlotThemes ───────── v1.0.1
  Installed StaticArrays ─────── v0.12.1
- Installed VersionParsing ───── v1.2.0
+ Installed FFMPEG ───────────── v0.2.4
+ Installed GeometryTypes ────── v0.7.7
  Installed DataStructures ───── v0.17.7
  Installed FastClosures ─────── v0.3.2
- Installed GeometryTypes ────── v0.7.7
- Installed ColorTypes ───────── v0.9.0
  Installed FixedPointNumbers ── v0.7.1
- Installed Colors ───────────── v0.11.2
+ Installed ColorTypes ───────── v0.9.0
+ Installed VersionParsing ───── v1.2.0
  Installed SortingAlgorithms ── v0.3.1
  Installed AbstractFFTs ─────── v0.4.1
+ Installed Colors ───────────── v0.11.2
  Installed Reexport ─────────── v0.2.0
  Installed Conda ────────────── v1.3.0
  Installed OrderedCollections ─ v1.1.0
  Installed LaTeXStrings ─────── v1.0.3
- Installed BinaryProvider ───── v0.5.8
  Installed Missings ─────────── v0.4.3
+ Installed BinaryProvider ───── v0.5.8
  Installed Contour ──────────── v0.5.1
  Installed GR ───────────────── v0.44.0
   Updating &#96;~/build/abelsiqueira/JSOTutorials.jl/linear-operators/introduct
@@ -819,6 +819,20 @@ ion-to-linear-operators/Project.toml&#96;
 </pre>
 
 
+<p>Julia version and JSO packages:</p>
+
+
+<img src="https://img.shields.io/badge/julia-1.3.1-3a5fcc.svg?style=flat-square&logo=data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAOCAMAAAAolt3jAAAB+FBMVEUAAAA3lyU3liQ4mCY4mCY3lyU4lyY1liM3mCUskhlSpkIvkx0zlSEeigo5mSc8mio0liKPxYQ/nC5NozxQpUBHoDY3lyQ5mCc3lyY6mSg3lyVPpD9frVBgrVFZqUpEnjNgrVE3lyU8mio8mipWqEZhrVJgrVFfrE9JoTkAVAA3lyXJOjPMPjNZhCowmiNOoz1erE9grVFYqUhCnjFmk2KFYpqUV7KTWLDKOjK8CADORj7GJx3SJyVAmCtKojpOoz1DnzFVeVWVSLj///+UV7GVWbK8GBjPTEPMQTjPTUXQUkrQSEGZUycXmg+WXbKfZ7qgarqbYraSVLCUV7HLPDTKNy7QUEjUYVrVY1zTXFXPRz2UVLmha7upeMCqecGlcb6aYLWfaLrLPjXLPjXSWFDVZF3VY1zVYlvRTkSaWKqlcr6qesGqecGpd8CdZbjo2+7LPTTKOS/QUUnVYlvVY1zUXVbPSD6TV7OibLuqecGqecGmc76aYbaibLvKOC/SWlPMQjrQUEjRVEzPS0PLPDL7WROZX7WgarqibLucY7eTVrCVWLLLOzLGLCLQT0bIMynKOC7FJx3MPjV/Vc+odsCRUa+SVLCDPaWVWLKWWrLJOzPHOTLKPDPLPDPLOzLLPDOUV6+UV7CVWLKVWLKUV7GUWLGPUqv///8iGqajAAAAp3RSTlMAAAAAAAAAAAAAABAZBAAAAABOx9uVFQAAAB/Y////eQAAADv0////pgEAAAAAGtD///9uAAAAAAAAAAcOQbPLfxgNAAAAAAA5sMyGGg1Ht8p6CwAAFMf///94H9j///xiAAAw7////65K+f///5gAABjQ////gibg////bAAAAEfD3JwaAFfK2o0RAAAAAA4aBQAAABEZAwAAAAAAAAAAAAAAAAAAAIvMfRYAAAA6SURBVAjXtcexEUBAFAXAfTM/IDH6uAbUqkItyAQYR26zDeS0UxieBvPVbArjXd9GS295raa/Gmu/A7zfBRgv03cCAAAAAElFTkSuQmCC">
+
+
+<img src="https://img.shields.io/badge/LinearOperators-0.6.0-brightgreen?color=22239b">
+
+<pre class="output">
+Tutorial beginning:
+</pre>
+
+
+<hr />
 <p>LinearOperators.jl is a package for matrix-like operators. Linear operators are defined by how they act on a vector, which is useful in a variety of situations where you don&#39;t want to produce the matrix.</p>
 
 
@@ -872,7 +886,7 @@ ion-to-linear-operators/Project.toml&#96;
 
 
 <pre class="output">
-4.2276033262255756e-16
+3.194906681775283e-16
 </pre>
 
 
@@ -909,7 +923,7 @@ true
 
 
 <pre class="output">
-4.096249 seconds &#40;2.71 M allocations: 249.913 MiB, 2.63&#37; gc time&#41;
+4.315465 seconds &#40;2.71 M allocations: 249.915 MiB, 2.76&#37; gc time&#41;
 </pre>
 
 
@@ -920,7 +934,7 @@ true
 
 
 <pre class="output">
-0.021302 seconds &#40;20.94 k allocations: 1.156 MiB&#41;
+0.024276 seconds &#40;20.94 k allocations: 1.156 MiB&#41;
 </pre>
 
 
@@ -932,7 +946,7 @@ true
 
 
 <pre class="output">
-0.111447 seconds &#40;279.06 k allocations: 14.356 MiB&#41;
+0.112218 seconds &#40;279.06 k allocations: 14.356 MiB&#41;
 </pre>
 
 
@@ -943,7 +957,7 @@ true
 
 
 <pre class="output">
-0.040902 seconds &#40;24.15 k allocations: 1.312 MiB&#41;
+0.043636 seconds &#40;24.15 k allocations: 1.312 MiB&#41;
 </pre>
 
 
@@ -962,7 +976,7 @@ true
 
 
 <pre class="output">
-3.3567280602695285e-14
+4.2637044262570043e-13
 </pre>
 
 
@@ -996,7 +1010,7 @@ H_{k+1} = \bigg(I - \frac{s_k y_k^T}{y_k^T s_k}\bigg)H_k\bigg(I - \frac{y_k s_k^
 
 
 <pre class="output">
-&#40;5.551115123125783e-16, 1.2432050435751766e-16, 1.6653345369377348e-16&#41;
+&#40;1.5700924586837752e-16, 2.7755575615628914e-17, 2.7755575615628914e-17&#41;
 </pre>
 
 
