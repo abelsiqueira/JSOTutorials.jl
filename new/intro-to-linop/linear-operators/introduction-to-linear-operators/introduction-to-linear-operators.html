@@ -863,7 +863,7 @@ opA * opB &#61; Linear operator
 
 
 <pre class="output">
-4.285563 seconds &#40;2.71 M allocations: 249.969 MiB, 2.81&#37; gc time&#41;
+4.245297 seconds &#40;2.71 M allocations: 249.914 MiB, 4.17&#37; gc time&#41;
 </pre>
 
 
@@ -886,7 +886,7 @@ opA * opB &#61; Linear operator
 
 
 <pre class="output">
-0.115580 seconds &#40;279.06 k allocations: 14.805 MiB&#41;
+0.113186 seconds &#40;279.06 k allocations: 14.804 MiB&#41;
 </pre>
 
 
@@ -897,7 +897,7 @@ opA * opB &#61; Linear operator
 
 
 <pre class="output">
-0.036348 seconds &#40;2.29 k allocations: 189.056 KiB&#41;
+0.035436 seconds &#40;2.29 k allocations: 189.056 KiB&#41;
 </pre>
 
 
@@ -955,7 +955,7 @@ Allocation of op2: 49600
 
 
 <pre class="output">
-2.2611452215626916e-14
+1.3178916474906314e-11
 </pre>
 
 
@@ -989,7 +989,7 @@ H_{k+1} = \bigg(I - \frac{s_k y_k^T}{y_k^T s_k}\bigg)H_k\bigg(I - \frac{y_k s_k^
 
 
 <pre class="output">
-&#40;1.1443916996305594e-16, 1.1102230246251565e-16, 3.3766115072321297e-16&#41;
+&#40;2.7194799110210365e-16, 0.0, 3.3306690738754696e-16&#41;
 </pre>
 
 
@@ -1011,7 +1011,7 @@ H_{k+1} = \bigg(I - \frac{s_k y_k^T}{y_k^T s_k}\bigg)H_k\bigg(I - \frac{y_k s_k^
   \frac{\partial u}{\partial x}(t_n,x_i,y_j) & \approx \frac{u^n_{i+1,j} - u^n_{i-1,j}}{2h}
       \qquad \text{(Central 1st order scheme)}; \\
   \frac{\partial^2 u}{\partial x^2}(t_n,x_i,y_j) & \approx \frac{u^n_{i+1,j} - 2u^n_{i,j} + u^n_{i-1,j}}{h^2}
-      \qquad \text{Central 2nd order scheme)}; \\
+      \qquad \text{(Central 2nd order scheme)}; \\
   \frac{\partial u}{\partial y}(t_n,x_i,y_j) & \approx \frac{u^n_{i,j+1} - u^n_{i,j-1}}{2h}
       \qquad \text{(Central 1st order scheme)}; \\
   \frac{\partial^2 u}{\partial y^2}(t_n,x_i,y_j) & \approx \frac{u^n_{i,j+1} - 2u^n_{i,j} + u^n_{i,j-1}}{h^2}
