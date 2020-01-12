@@ -21,7 +21,7 @@ for p in pkgs
   c=string(hash(p) % 0x1000000, base=16)
   display("text/html", "<img src=\"https://img.shields.io/badge/$p-$v-brightgreen?color=$c\">")
 end
-println("Tutorial beginning:")
+pkg"status"
 
 
 using LinearOperators
@@ -30,6 +30,7 @@ prod(v) = [3v[1] - v[2]; 2v[1] + 2v[2]]
 #                     type, nrows, ncols, symm?, herm?, prod[; tprod, ctprod]
 A = LinearOperator(Float64,     2,     2, false, false, prod)
 
+@show A
 A * ones(2)
 
 
@@ -37,6 +38,9 @@ prod(v) = [3v[1] - v[2]; 2v[1] + 2v[2]]
 tprod(v) = [3v[1] + 2v[2]; -v[1] + 2v[2]]
 
 A = LinearOperator(Float64, 2, 2, false, false, prod, tprod)
+
+transpose(A) * ones(2)
+
 
 A' * ones(2)
 
@@ -46,13 +50,7 @@ using FFTW, LinearAlgebra
 A = LinearOperator(16, 16, false, false, fft, nothing, ifft)
 
 v = rand(16) + im * rand(16)
-norm(A' * A * v - v)
-
-
-A = LinearOperator(16, 16, false, false, fft, nothing, ifft)
-v = rand(16) + im * rand(16)
-
-transpose(A) * v == conj.(ifft(conj.(v)))
+norm(A * v - fft(v)), norm(A' * v - ifft(v)), norm(Matrix(A' * A) - I)
 
 
 n = 4000
@@ -61,6 +59,8 @@ B = rand(n, n)
 opA = LinearOperator(A)
 opB = LinearOperator(B)
 
+@show opA * opB
+
 # Run twice
 @time A * B
 @time opA * opB
@@ -68,6 +68,24 @@ opB = LinearOperator(B)
 v = rand(n)
 @time A * (B * v)
 @time (opA * opB) * v;
+
+
+m, n = 50, 30
+A = rand(50, 30)
+op1 = PreallocatedLinearOperator(A)
+op2 = LinearOperator(A)
+v = rand(n)
+
+op1 * v
+al = @allocated for i = 1:100
+  op1 * v
+end
+println("Allocation of op1: $al")
+op2 * v
+al = @allocated for i = 1:100
+  op2 * v
+end
+println("Allocation of op2: $al")
 
 
 A = rand(5,5)
@@ -176,11 +194,11 @@ m = 30
 U0, A = HeatEquation(u0, L, m, δ, α)
 U = copy(U0)
 
-plot_rows = 5
-plot_cols = 3
+plot_rows = 4
+plot_cols = 4
 plots = []
 
-Δt = 25
+Δt = 10
 
 for i = 1:plot_rows
   for j = 1:plot_cols
@@ -199,7 +217,7 @@ for i = 1:plot_rows
     end
   end
 end
-plot(plots..., layout=(plot_rows, plot_cols), size=(900, plot_rows * 300))
+plot(plots..., layout=(plot_rows, plot_cols), size=(1000, plot_rows * 250))
 
 
 U0, A = HeatEquation(u0, L, m, δ, α)
