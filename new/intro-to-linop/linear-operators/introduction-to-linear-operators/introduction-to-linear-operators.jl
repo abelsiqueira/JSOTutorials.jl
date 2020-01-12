@@ -5,7 +5,7 @@ pkg"add LinearOperators"
 pkg"add FFTW"
 pkg"add Plots"
 pkg"add PyPlot"
-pkg"add Weave" # so the auto-build doesn't complain
+pkg"add Weave"
 pkg"instantiate"
 pkg"status"
 
